@@ -6,7 +6,7 @@ const userController = {
 
     user:(req,res,next)=>{
         
-            res.render('index', {hobbiesList: hobbies, style: 'style'});
+            res.render('index', {hobbiesList: hobbies, style:'style', title:'Inicio'});
           
     }
 

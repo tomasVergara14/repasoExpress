@@ -1,29 +1,79 @@
+*{
+  margin: 0px;
+}
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #2d4c58;
 }
 
-.hobbies{
+.header{
+  background-color: rgba(248, 248, 76, 0.911);
+}
+
+.head-top{
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  padding: 1%;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.hobbies label{
-  width: 60%;
+.imageLogo{
+  width: 15%;
 }
 
-.hobbies input{
-  width: 50%;
+.search{
+  width: 45%;
+  height: 5%;
+  text-align: center;
+  border: 1px solid gray ;
+  border-radius: 5px;
 }
 
-.par{
-  border: 1px solid green;
+.icono{
+  width: 25%;
+  display: flex;
+  align-items: center;
 }
-.impar{
-  border: 1px solid red;
+
+.icono i{
+  margin-right: 5%;
+}
+
+
+/* Header abajo */
+
+.head-botton{
+  display: flex;
+  padding-bottom: 1%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottonLeft{
+  width: 15%;
+  margin-left: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottonCenter{
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottonRight{
+  
+  width: 30%;
+  margin-right: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

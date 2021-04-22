@@ -1,28 +1,10 @@
 <%- include('./partials/head') %>
+<%- include('./partials/header') %>  
 
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <nav>
-      <a href="">hello</a>
-      <h2>hola</h2>
-      <form action="">
-        <label for=""></label>
-        <input type="mail">
-      </form>
-      <form action="">
-        <ul class="hobbies">
-          <% for(let i =0 ; i < hobbies.length ; i++ ) {%>
-            <label>Hobbie <%=i %></label>
-            <%if (i%2==0){%>
-              <input type="text" class="par" placeholder="<%=hobbies[i]%>">
-            <%} else{%>
-              <input type="text" class="impar" placeholder="<%=hobbies[i]%>"  >
-            <%}%>
-          <%}%>
-        </ul>
-      </form>
-      
-    </nav>
+
+    <h1>Titulo</h1>
+    <a href="">hola</a>
+    
   </body>
 </html>
