@@ -6,3 +6,24 @@ body {
 a {
   color: #00B7FF;
 }
+
+.hobbies{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.hobbies label{
+  width: 60%;
+}
+
+.hobbies input{
+  width: 50%;
+}
+
+.par{
+  border: 1px solid green;
+}
+.impar{
+  border: 1px solid red;
+}

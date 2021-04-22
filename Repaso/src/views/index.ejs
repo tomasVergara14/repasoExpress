@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+<%- include('./partials/head') %>
+
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
@@ -14,9 +10,19 @@
         <label for=""></label>
         <input type="mail">
       </form>
-      <ul>
-        <% %>
-      </ul>
+      <form action="">
+        <ul class="hobbies">
+          <% for(let i =0 ; i < hobbies.length ; i++ ) {%>
+            <label>Hobbie <%=i %></label>
+            <%if (i%2==0){%>
+              <input type="text" class="par" placeholder="<%=hobbies[i]%>">
+            <%} else{%>
+              <input type="text" class="impar" placeholder="<%=hobbies[i]%>"  >
+            <%}%>
+          <%}%>
+        </ul>
+      </form>
+      
     </nav>
   </body>
 </html>
