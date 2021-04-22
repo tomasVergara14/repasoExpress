@@ -185,7 +185,7 @@ a {
 }
 
 .headDescription{
-  
+  padding: 5px;
   border-bottom: 1px solid lightgray;
 }
 
@@ -249,4 +249,38 @@ a {
 .description:hover  {
   height: 40px;
   margin-top: 15px;
+}
+
+
+/* Footer */
+
+.footerInfo{
+  background-color: white;
+  display: flex;
+}
+
+.footer-box{
+  margin: 2% 2%;
+  padding: 10px;
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-box i{
+  font-size: x-large;
+  width: 100%;
+  padding: 20px;
+}
+
+.footer-box p{
+  font-size: 0.8em;
+  color: rgb(100, 99, 99);
+}
+
+.container{
+  background-color: white;
 }
