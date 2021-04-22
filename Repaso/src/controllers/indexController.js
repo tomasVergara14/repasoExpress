@@ -6,6 +6,9 @@ const indexController = {
     },
     register:(req,res)=>{
         res.render('register', {title:'Register', style:'register'})
+    },
+    login:(req,res)=>{
+        res.render('login',{style:'login', title:'Login'})
     }
 }
 
