@@ -90,11 +90,11 @@ a {
 /* Cards de pago */
 
 .Cards{
-  margin: 4% 0%;
+  margin: 4% 2%;
   padding: 2%;
   display: flex;
-  width: 100%;
-  background-color: honeydew;
+  width: 92%;
+  background-color: white;
   justify-content: space-between;
 }
 
@@ -108,4 +108,52 @@ a {
 .box i{
   margin-right: 5px;
   color: darkblue;
+}
+
+/* Offers */
+
+.offers{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.offersTitle{
+  margin: 4% 2%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.offersTitle a{
+  margin-left: 2%;
+}
+
+.offersCards{
+  margin: 4% 2%;
+  width: 20%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.offersCardsImage{
+  width: 100%;
+  border-bottom: darkgrey;
+}
+
+.offersCards p{
+  padding: 2px;
+}
+
+.price{
+  font-size: 18px;
+  color: darkblue;
+}
+
+.off{
+  color: green;
 }
