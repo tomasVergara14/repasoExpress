@@ -1,13 +1,15 @@
 *{
   margin: 0px;
+  
 }
 
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(214, 214, 214);
 }
 
 a {
-  color: #2d4c58;
+  color: darkblue;
 }
 
 .header{
@@ -76,4 +78,34 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* Body */
+
+.bannerImage{
+  width: 100%;
+}
+
+
+/* Cards de pago */
+
+.Cards{
+  margin: 4% 0%;
+  padding: 2%;
+  display: flex;
+  width: 100%;
+  background-color: honeydew;
+  justify-content: space-between;
+}
+
+.box{
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box i{
+  margin-right: 5px;
+  color: darkblue;
 }
