@@ -1,0 +1,41 @@
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>  
+
+
+<body class="body-register">
+    <h3>Completa tus datos</h3>
+    <div class="form-body">
+        <form class="form-boxes" action="" method="">
+            <div class="form-box">
+                <label class="form-box-label"  for="name">Nombre</label>
+                <input class="form-box-input" type="text" id="name" name="name">
+            </div>
+            <div class="form-box">
+                <label class="form-box-label" for="lastname">Apellido</label>
+                <input class="form-box-input" type="text" id="lastname" name="lastname">
+            </div>
+            <div class="form-box">
+                <label class="form-box-label" for="dni">DNI</label>
+                <input class="form-box-input" type="number" id="dni" name="dni">
+            </div>
+            <div class="form-box"></div>
+            <div class="form-box">
+                <label class="form-box-label" for="mail">E-mail</label>
+                <input class="form-box-input" type="email" id="mail" name="mail">
+            </div>
+            <div class="form-box">
+                <label class="form-box-label" for="pass">Clave</label>
+                <input class="form-box-input" type="password" id="pass" name="pass">
+            </div>
+            
+            <button class="button">Registrarse</button>
+            
+        </form>
+
+
+    </div>
+    
+    
+</body>
+
+<%- include('./partials/footer') %>

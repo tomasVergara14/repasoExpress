@@ -254,6 +254,12 @@ a {
 
 /* Footer */
 
+.footer{
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0px;
+}
+
 .footerInfo{
   background-color: white;
   display: flex;
