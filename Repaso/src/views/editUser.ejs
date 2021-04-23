@@ -3,9 +3,9 @@
 
 
 <body class="body-register">
-    <h3>Completa tus datos</h3>
+    <h3>Editando el usuario <%=idUser%></h3>
     <div class="form-body">
-        <form class="form-boxes" action="/register" method="POST">
+        <form class="form-boxes" action="/edit/id?_method=PUT" method="POST">
             <div class="form-box">
                 <label class="form-box-label"  for="name">Nombre</label>
                 <input class="form-box-input" type="text" id="name" name="name">

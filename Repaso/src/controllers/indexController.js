@@ -9,6 +9,25 @@ const indexController = {
     },
     login:(req,res)=>{
         res.render('login',{style:'login', title:'Login'})
+    },
+    save:(req,res)=>{
+        let info = req.body
+        res.send(info)
+    },
+    editview:(req,res)=>{
+
+        
+        //  Saber que usuario se modifica
+        let idUser = req.params.id //el id, es lo que use en la ruta parametrizada
+
+        res.render('editUser', {title:'Edit', style:'register', idUser:idUser})
+    },
+    edit:(req,res)=>{
+
+        //  Saber que usuario se modifica
+        let idUser = req.params.id //el id, es lo que use en la ruta parametrizada
+        res.send(idUser)
+
     }
 }
 

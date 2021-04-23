@@ -6,6 +6,10 @@ var indexController = require('../controllers/indexController.js')
 router.get('/', indexController.index);
 
 router.get('/register', indexController.register)
+router.post('/register', indexController.save)
+
+router.get('/edit/:id', indexController.editview)
+router.put('/edit/:id', indexController.edit)
 
 router.get('/login', indexController.login)
 
