@@ -82,6 +82,10 @@ a {
 
 /* Body */
 
+.error{
+  margin: 45%;
+}
+
 .bannerImage{
   width: 100%;
 }

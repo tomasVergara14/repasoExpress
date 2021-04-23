@@ -11,6 +11,7 @@ router.post('/register', indexController.save)
 router.get('/edit/:id', indexController.editview)
 router.put('/edit/:id', indexController.edit)
 
-router.get('/login', indexController.login)
+router.get('/login', indexController.loginview)
+router.post('/login', indexController.login)
 
 module.exports = router;

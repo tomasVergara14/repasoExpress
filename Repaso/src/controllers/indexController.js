@@ -7,7 +7,7 @@ const indexController = {
     register:(req,res)=>{
         res.render('register', {title:'Register', style:'register'})
     },
-    login:(req,res)=>{
+    loginview:(req,res)=>{
         res.render('login',{style:'login', title:'Login'})
     },
     save:(req,res)=>{
@@ -27,6 +27,12 @@ const indexController = {
         //  Saber que usuario se modifica
         let idUser = req.params.id //el id, es lo que use en la ruta parametrizada
         res.send(idUser)
+
+    },
+    login:(req,res)=>{
+        
+        let info = req.body
+        res.send(info)
 
     }
 }
