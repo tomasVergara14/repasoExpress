@@ -1,4 +1,8 @@
+const fs = require('fs');
+
 const hobbies = ['patinar','jugar','apuestas','programar','cucharear']
+
+
 const indexController = {
 
     index: (req,res)=>{
@@ -11,7 +15,32 @@ const indexController = {
         res.render('login',{style:'login', title:'Login'})
     },
     save:(req,res)=>{
-        let info = req.body
+        let info = {
+            name: req.body.name,
+            lastname: req.body.lastname,
+            dni: req.body.dni,
+            mail:req.body.mail,
+            pass: req.body.pass
+        }
+
+        //Volverla json
+
+        let archivoUsuarios = fs.readFileSync('usuariosInfo.json', {encoding:'utf-8'})
+        let usuarios = [];
+
+        if(archivoUsuarios ==''){
+             usuarios = []
+        }else{
+            let usuarios = JSON.parse(archivoUsuarios)
+        };
+
+        usuarios.push(info);
+
+
+         usuariosJson = JSON.stringify(usuarios);
+
+        fs.appendFileSync('usuariosInfo.json', usuariosJson)
+
         res.send(info)
     },
     editview:(req,res)=>{
