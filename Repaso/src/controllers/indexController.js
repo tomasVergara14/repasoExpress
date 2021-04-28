@@ -15,14 +15,17 @@ const indexController = {
     loginview:(req,res)=>{
         res.render('login',{style:'login', title:'Login'})
     },
-    save:(req,res)=>{
+    save:(req,res, next)=>{
+        //agregar el next para multer y middlewares
         let info = {
             name: req.body.name,
             lastname: req.body.lastname,
             dni: req.body.dni,
             mail:req.body.mail,
-            pass: bcrypt.hashSync(req.body.pass, 12) //Para encriptar la contraseña
-                                                //para leerla y compararla es bcrypt.compareSync(textoPlano, hash)
+            pass: bcrypt.hashSync(req.body.pass, 12), //Para encriptar la contraseña
+                                    //para leerla y compararla es bcrypt.compareSync(textoPlano, hash)
+            avatar: req.files[0].filename       //en la propiedad files en el primer archivo
+                                                //subido [0] con el nombre filename     
         }
 
         //Leer nuestro archivo para ver si habia usuarios registrados
@@ -91,17 +94,27 @@ const indexController = {
         }
 
         //Recorro el array de usuarios 
-        
-        for( let i = 0; i < usuarios.length ; i++ ){
 
+        usuarios.forEach(usuario=>{
             //Comparo si los datos del formulario son iguales a los almacenados en el JSON
-
-            if(info.mail == usuarios[i].mail && bcrypt.compareSync(info.pass, usuarios[i].pass )){
-                
+            if(info.mail == usuario.mail && bcrypt.compareSync(info.pass, usuario.pass ) ){
                 res.render('index', { title: 'Repaso', style:'style', hobbies: hobbies })
             }
-            res.send('error')            
-        }
+            else{
+                res.render('error', { title: 'Repaso', style:'style', hobbies: hobbies })
+            }
+        })
+        
+        // for( let i = 0; i < usuarios.length ; i++ ){
+
+        //     
+
+        //     if(info.mail == usuarios[i].mail && bcrypt.compareSync(info.pass, usuarios[i].pass )){
+                
+        //         res.render('index', { title: 'Repaso', style:'style', hobbies: hobbies })
+        //     }
+        //     res.send('error')            
+        // }
     }
 }
 
