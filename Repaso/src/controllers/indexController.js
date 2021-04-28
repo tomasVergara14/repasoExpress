@@ -2,14 +2,15 @@ const fs = require('fs');
 const bcrypt = require('bcrypt');
 const path = require('path')
 
+let productsData = fs.readFileSync('./products.json', {encoding:'utf-8'})
+let products = JSON.parse(productsData)
+
 
 
 const indexController = {
 
     index: (req,res)=>{
 
-        let productsData = fs.readFileSync('./products.json', {encoding:'utf-8'})
-        let products = JSON.parse(productsData)
         let productsVisited = products.filter((product)=> product.category == "visited" )
         let productsOffers = products.filter((product)=> product.category == "in-sale" )
 

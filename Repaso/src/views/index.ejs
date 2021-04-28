@@ -52,7 +52,7 @@
       <% productsOffers.forEach((product) =>{ %>
         <section class="offersCards">
           <figure>
-            <a href="/products/detail"> <img class="offersCardsImage" src="/images/img/products/<%=product.image%>" alt="<%=product.name%>"> </a>
+            <a href="/products/detail/<%=product.id%>"> <img class="offersCardsImage" src="/images/img/products/<%=product.image%>" alt="<%=product.name%>"> </a>
           </figure>
           <article class="offersInfo">
             <article class="headDescription">
@@ -74,7 +74,7 @@
       <% productsVisited.forEach((product) =>{ %>
         <section class="latestCards">
           <figure>
-            <img class="latestCardsImage" src="/images/img/products/<%=product.image%>" alt="Teclado">
+            <<a href="/products/detail/<%=product.id%>"> <img class="latestCardsImage" src="/images/img/products/<%=product.image%>" alt="Teclado"></a>
           </figure>
           <article class="latestInfo">
             <article class="headDescription">
