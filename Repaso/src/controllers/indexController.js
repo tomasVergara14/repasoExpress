@@ -1,13 +1,19 @@
 const fs = require('fs');
 const bcrypt = require('bcrypt');
+const path = require('path')
 
-const hobbies = ['patinar','jugar','apuestas','programar','cucharear']
 
 
 const indexController = {
 
     index: (req,res)=>{
-        res.render('index', { title: 'Repaso', style:'style', hobbies: hobbies })
+
+        let productsData = fs.readFileSync('./products.json', {encoding:'utf-8'})
+        let products = JSON.parse(productsData)
+        let productsVisited = products.filter((product)=> product.category == "visited" )
+        let productsOffers = products.filter((product)=> product.category == "in-sale" )
+
+        res.render('index', { title: 'Repaso', style:'style', productsVisited: productsVisited, productsOffers: productsOffers })
     },
     register:(req,res)=>{
         res.render('register', {title:'Register', style:'register'})

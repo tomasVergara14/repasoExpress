@@ -2,7 +2,28 @@
 <%- include('./partials/header') %>  
 
 <body>
-    <h1>productos</h1>    
+     
+
+    <div class="latest">
+        <div class="latestTitle">
+            <h1>Productos</h1>
+            <a href="">Ver mas</a>
+        </div>
+        <%products.forEach((product)=> {%>
+            <section class="latestCards">
+                <figure>
+                <a href="/products/detail/<%=product.id%>"> <img class="latestCardsImage" src="/images/img/products/<%=product.image%>" alt="Teclado"></a>
+                </figure>
+                <article class="latestInfo">
+                <article class="headDescription">
+                    <span class="off">Discount %15 OFF </span>
+                    <h3 class="price"><%=product.price%></h3>   
+                </article>
+                <p class="description"> <%=product.name%> </p>
+                </article>
+            </section>
+        <% }) %>
+    </div>
 </body>
 
 <%- include('./partials/footer') %>

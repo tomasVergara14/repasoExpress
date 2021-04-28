@@ -39,6 +39,9 @@
       </div>
     </div>
 
+
+    
+
     <!-- Ofertas -->
     <div class="offers">
       <div class="offersTitle">
@@ -46,58 +49,20 @@
         <a href="/products">Ver mas</a>
       </div>
 
-      <section class="offersCards">
-        <figure>
-          <a href="/products/detail"> <img class="offersCardsImage" src="/images/img/products/img-apple-magic-keyboard.jpg" alt="Teclado"> </a>
-        </figure>
-        <article class="offersInfo">
-          <article class="headDescription">
-            <span class="off">Discount %15 OFF </span>
-            <h3 class="price">$41.500</h3>   
+      <% productsOffers.forEach((product) =>{ %>
+        <section class="offersCards">
+          <figure>
+            <a href="/products/detail"> <img class="offersCardsImage" src="/images/img/products/<%=product.image%>" alt="<%=product.name%>"> </a>
+          </figure>
+          <article class="offersInfo">
+            <article class="headDescription">
+              <span class="off">Discount %15 OFF </span>
+              <h3 class="price"> <%=product.price%> </h3>   
+            </article>
+            <p class="description"> <%=product.name%> </p>
           </article>
-          <p class="description">Teclado Apple ultima generacion</p>
-        </article>
-      </section>
-
-      <section class="offersCards">
-        <figure>
-          <img class="offersCardsImage" src="/images/img/products/img-apple-magic-keyboard.jpg" alt="teclado">
-        </figure>
-        <article class="offersInfo">
-          <article class="headDescription">
-            <span class="off">Discount %15 OFF </span>
-            <h3 class="price">$41.500</h3>   
-          </article>
-          <p class="description">Teclado Apple ultima generacion</p>
-        </article>
-      </section>
-
-      <section class="offersCards">
-        <figure>
-          <img class="offersCardsImage" src="/images/img/products/img-apple-magic-keyboard.jpg" alt="teclado">
-        </figure>
-        <article class="offersInfo" >
-          <article class="headDescription">
-            <span class="off">Discount %15 OFF </span>
-            <h3 class="price">$41.500</h3>   
-          </article>
-          <p class="description">Teclado Apple ultima generacion</p>
-        </article>
-      </section>
-
-      <section class="offersCards">
-        <figure>
-          <img class="offersCardsImage" src="/images/img/products/img-apple-magic-keyboard.jpg" alt="teclado">
-        </figure>
-        <article class="offersInfo">
-          <article class="headDescription">
-            <span class="off">Discount %15 OFF </span>
-            <h3 class="price">$41.500</h3>   
-          </article>
-          <p class="description">Teclado Apple ultima generacion</p>
-        </article>
-      </section>
-    </div>
+        </section>
+      <% }) %>
 
     <!-- Lo mas buscado -->
     <div class="latest">
@@ -106,58 +71,20 @@
         <a href="">Ver mas</a>
       </div>
 
-      <section class="latestCards">
-        <figure>
-          <img class="latestCardsImage" src="/images/img/products/img-apple-magic-keyboard.jpg" alt="Teclado">
-        </figure>
-        <article class="latestInfo">
-          <article class="headDescription">
-            <span class="off">Discount %15 OFF </span>
-            <h3 class="price">$41.500</h3>   
+      <% productsVisited.forEach((product) =>{ %>
+        <section class="latestCards">
+          <figure>
+            <img class="latestCardsImage" src="/images/img/products/<%=product.image%>" alt="Teclado">
+          </figure>
+          <article class="latestInfo">
+            <article class="headDescription">
+              <span class="off">Discount %15 OFF </span>
+              <h3 class="price"><%=product.price%></h3>   
+            </article>
+            <p class="description"> <%=product.name%> </p>
           </article>
-          <p class="description">Teclado Apple ultima generacion</p>
-        </article>
-      </section>
-
-      <section class="latestCards">
-        <figure>
-          <img class="latestCardsImage" src="/images/img/products/img-apple-magic-keyboard.jpg" alt="teclado">
-        </figure>
-        <article class="latestInfo">
-          <article class="headDescription">
-            <span class="off">Discount %15 OFF </span>
-            <h3 class="price">$41.500</h3>   
-          </article>
-          <p class="description">Teclado Apple ultima generacion</p>
-        </article>
-      </section>
-
-      <section class="latestCards">
-        <figure>
-          <img class="latestCardsImage" src="/images/img/products/img-apple-magic-keyboard.jpg" alt="teclado">
-        </figure>
-        <article class="latestInfo" >
-          <article class="headDescription">
-            <span class="off">Discount %15 OFF </span>
-            <h3 class="price">$41.500</h3>   
-          </article>
-          <p class="description">Teclado Apple ultima generacion</p>
-        </article>
-      </section>
-
-      <section class="latestCards">
-        <figure>
-          <img class="latestCardsImage" src="/images/img/products/img-apple-magic-keyboard.jpg" alt="teclado">
-        </figure>
-        <article class="latestInfo">
-          <article class="headDescription">
-            <span class="off">Discount %15 OFF </span>
-            <h3 class="price">$41.500</h3>   
-          </article>
-          <p class="description">Teclado Apple ultima generacion</p>
-        </article>
-      </section>
-    </div>
+        </section>
+      <% }) %>  
 
     
   </body>
