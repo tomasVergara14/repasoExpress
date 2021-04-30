@@ -17,11 +17,10 @@ const productsController = {
 
     detail:(req,res)=>{
         
-        let buscado = req.params.id
-        let productId = products.find((producto)=> producto.id === buscado)
-        
+        const productId = products.find((product) => product.id == req.params.id)
+
         console.log(productId)
-        res.render('detail', {style:'style', title:'Detail', productId:productId})
+        res.render('detail', {style:'detail', title:'Detail', productId:productId})
     }
 
 }

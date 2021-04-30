@@ -4,18 +4,18 @@
 <body>
     <div class="latest">
         <div class="latestTitle">
-            <h1>Detalle del Producto <%=productId.name%> </h1>
+            <h1>Detalle del Producto <%= productId.name %> </h1>
         </div>     
             <section class="latestCards">
                 <figure>
-                <a href="/products/detail/<%=productId.id%>"> <img class="latestCardsImage" src="/images/img/products/<%=productId.image%>" alt="<%=productId.name%>"></a>
+                <a href="/products/detail/<%=productId.id%>"> <img class="latestCardsImage" src="/images/img/products/<%=productId.image%>" alt=""></a>
                 </figure>
                 <article class="latestInfo">
                 <article class="headDescription">
                     <span class="off">Discount %15 OFF </span>
-                    <h3 class="price"><%=productId.price%></h3>   
+                    <h3 class="price"> <%= productId.price %> </h3>   
                 </article>
-                <p class="description"> <%=productId.name%> </p>
+                <p class="description"> <%= productId.description %> </p>
                 </article>
             </section>
         
