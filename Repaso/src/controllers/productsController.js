@@ -21,6 +21,37 @@ const productsController = {
 
         console.log(productId)
         res.render('detail', {style:'detail', title:'Detail', productId:productId})
+    },
+    
+    sale: (req,res)=>{
+        res.render('sale', {title:'Sale', style:'register'})
+    },
+    create:(req,res,next)=>{
+        let productInfo = {
+            //id:  falta agregar el id,
+            name: req.body.name,
+            precio: req.body.precio,
+            category: "in-sale",
+            description: req.body.description,
+            discount: req.body.discount,
+            avatar: req.files[0].filename
+        }
+
+        var newProducts;
+
+        if(productsArchivo == ''){
+            newProducts = []
+        }
+        else{
+            newProducts = products
+        }
+
+        newProducts.push(productInfo)
+
+        productsJson = JSON.stringify(newProducts)
+
+        fs.writeFileSync('./products.json',productsJson)
+        res.send(productsJson)
     }
 
 }
