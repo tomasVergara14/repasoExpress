@@ -116,22 +116,10 @@
   
   /* Offers */
   
-  .offers{
-    display: flex;
-    flex-wrap: wrap;
-  }
   
   .latest{
     display: flex;
     flex-wrap: wrap;
-  }
-  
-  .offersTitle{
-    margin: 1% 2%;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
   }
   
   .latestTitle{
@@ -142,23 +130,11 @@
     align-items: center;
   }
   
-  .offersTitle a{
-    margin-left: 2%;
-  }
   
   .latestTitle a{
     margin-left: 2%;
   }
   
-  .offersCards{
-    margin: 1% 2%;
-    width: 20%;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
   
   .latestCards{
     margin: 1% 2%;
@@ -170,19 +146,12 @@
     text-align: center;
   }
   
-  .offersCardsImage{
-    width: 100%;
-    border-bottom: darkgrey;
-  }
   
   .latestCardsImage{
     width: 100%;
     border-bottom: darkgrey;
   }
   
-  .offersCards p{
-    padding: 2px;
-  }
   
   .latestCards p{
     padding: 2px;
@@ -203,17 +172,6 @@
     color: green;
   }
   
-  .offersInfo{
-    
-    padding: 15px;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
   .latestInfo{
     padding: 15px;
     position: relative;
@@ -232,14 +190,23 @@
     overflow: hidden;
   }
   
-  .offersCards:hover {
-    box-shadow: 0 0 5px rgba(83, 83, 83, 0.5);
-    visibility: visible;
-  }
   
   .latestCards:hover {
     box-shadow: 0 0 5px rgba(83, 83, 83, 0.5);
     visibility: visible;
+  }
+  
+  .buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .but{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    margin: 2% 2%;
   }
   
   

@@ -19,7 +19,6 @@ const productsController = {
         
         const productId = products.find((product) => product.id == req.params.id)
 
-        console.log(productId)
         res.render('detail', {style:'detail', title:'Detail', productId:productId})
     },
     
@@ -34,7 +33,7 @@ const productsController = {
             category: "in-sale",
             description: req.body.description,
             discount: req.body.discount,
-            avatar: req.files[0].filename
+            image: req.files[0].filename
         }
 
         var newProducts;
@@ -52,6 +51,48 @@ const productsController = {
 
         fs.writeFileSync('./products.json',productsJson)
         res.send(productsJson)
+    },
+    editView: (req,res)=>{
+        
+        const productId = products.find((product) => product.id == req.params.id)
+        console.log(productId)
+        res.render('editProducts', {title:'Edit', style:'register', productId:productId})
+
+    },
+    editProduct:(req,res,next)=>{
+        let productInfo = {
+            //id:  falta agregar el id,
+            name: req.body.name,
+            precio: req.body.precio,
+            description: req.body.description,
+            discount: req.body.discount,
+            image: req.files[0].filename
+        }
+
+        const keys = Object.keys(productInfo)
+		const product = products.find((product) => product.id == req.params.id)
+		keys.forEach((key) => (product[key] = req.body[key]))
+        product.image = req.files[0].filename
+        product.category= "in-sale"
+
+		const productsJSon = JSON.stringify(products)
+		fs.writeFileSync('./products.json', productsJSon)
+
+		res.redirect('/')
+    },
+    delete: (req,res)=>{
+        const idProduct = req.params.id
+
+		
+		const productFilter = products.filter(function(product) {
+            return product.id != idProduct
+		})
+		
+		
+		const productsJSon = JSON.stringify(productFilter)
+
+		fs.writeFileSync('./products.json', productsJSon)
+        res.redirect('/')
     }
 
 }

@@ -18,6 +18,13 @@
                 <p class="description"> <%= productId.description %> </p>
                 </article>
             </section>
+            <div class="buttons">
+                <a href="/products/edit/<%=productId.id%>"><button>Modificar</button></a>
+            </div>
+            <form  class="but" action="/products/eliminate/<%=productId.id%>?_method=DELETE" method="POST">
+                <button type="submit">Eliminar</button>
+            </form>
+            
         
     </div>    
     

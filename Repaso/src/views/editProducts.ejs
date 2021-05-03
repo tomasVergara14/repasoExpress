@@ -1,0 +1,40 @@
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>  
+
+
+<body class="body-register">
+    <h3>Edita tu producto</h3>
+    <div class="form-body">
+        <form class="form-boxes" action="/products/edit/<%=productId.id%>?_method=PUT" method="POST" enctype="multipart/form-data" >
+            <div class="form-box">
+                <label class="form-box-label"  for="name">Nombre</label>
+                <input class="form-box-input" type="text" id="name" name="name" placeholder="<%=productId.name%>">
+            </div>
+            <div class="form-box">
+                <label class="form-box-label" for="precio">Precio</label>
+                <input class="form-box-input" type="number" id="precio" name="precio" placeholder="<%=productId.price%>">
+            </div>
+            <div class="form-box">
+                <label class="form-box-label" for="description">Description</label>
+                <textarea name="description" id="description" cols="30" rows="10" ></textarea>
+            </div>
+            <div class="form-box">
+                <label class="form-box-label" for="discount">Discount</label>
+                <input class="form-box-input" type="number" id="discount" name="discount" placeholder="<%=productId.discount%>"
+            </div>
+            <div class="form-box">
+                <label class="form-box-label" for="avatar">Imagen</label>
+                <input  type="file" id="avatar" id="avatar" name="avatar">
+            </div>
+            
+            <input class="button" type="submit" value="modificar">
+            
+        </form>
+
+
+    </div>
+    
+    
+</body>
+
+<%- include('./partials/footer') %>
